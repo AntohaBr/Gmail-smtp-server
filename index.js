@@ -1,5 +1,5 @@
 const express = require('express')
-const nodemailer = require("nodemailer");
+const nodemailer = require('nodemailer')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 
@@ -22,8 +22,8 @@ let transporter = nodemailer.createTransport({
     auth: {
         user: smtp_login,
         pass: smtp_password,
-    }
-})
+    },
+});
 
 
 app.get('/', (req, res) => {
@@ -43,8 +43,9 @@ app.post('/sendMessage', async (req, res) => {
                <div>Name: ${name}</div>
                <div>Email: ${email}</div>
                <div>Message: ${message}</div>`
-    })
-    res.send(res.body)
+    });
+    res.send(res.body);
+
 })
 
 
